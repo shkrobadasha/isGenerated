@@ -98,6 +98,10 @@ fun App() {
                         isLoading = true
                         error = null
                         try {
+                            if (text.length < 20) {
+                                error = "Текст должен содержать минимум 20 символов"
+                                return@launch
+                            }
                             val response = apiService.analyzeText(text)
                             result = if (response.isGenerated) {
                                 "Текст сгенерирован\nУверенность: ${String.format("%.1f", response.confidence * 100)}%"

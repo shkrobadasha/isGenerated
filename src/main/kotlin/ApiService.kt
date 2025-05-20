@@ -35,7 +35,8 @@ class ApiService {
     }
 
     // Ссылка на ngrok
-    private val baseUrl = "https://01d8-35-237-184-155.ngrok-free.app"
+    private val baseUrl = "https://1d13-34-48-57-55.ngrok-free.app"
+
 
     suspend fun analyzeText(text: String): TextAnalysisResponse = withContext(Dispatchers.IO) {
         try {
